@@ -1,0 +1,43 @@
+.section_5{
+    min-height: 500px;
+    height: auto;
+    margin-top: 70px;
+    background:#F9F9F9;
+    padding: 80px 0 40px 0;
+}
+
+.section_5_content{
+    position: relative;
+    height: 50%;
+    top:15%;
+}
+.section_5_HEIGHT{
+    height: 90% !important;
+    top:5%;
+}
+.section_5_content_description {
+  background: #fff;
+  padding: 30px;
+}
+.section_5_content_acide {
+  padding: 0;
+}
+.section_5_content_acide>img {
+  width: 100%;
+}
+.section_5_row:first-child {
+  margin-bottom: 30px;
+}
+.section_5_acide_description {
+  line-height: 1.2rem;
+  font-size: 15px;
+  color: #606060;
+  padding-top: 20px;
+}
+.section_5_acide {
+  background: #fff;
+}
+.desc
+{
+    white-space: normal;
+}

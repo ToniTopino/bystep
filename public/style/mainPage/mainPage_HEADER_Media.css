@@ -1,0 +1,127 @@
+@media only screen and (min-width: 320px) and (max-width: 768px) { 
+    header{
+        height: 60px !important;
+        width:100vw !important;
+        background:black;
+        position: fixed !important;
+        z-index: 5000 !important;
+        top:0 !important;
+        margin:0 !important;
+        padding:0 !important;
+        
+    }
+    .top-header,.middle-header{
+        display:none;
+    }
+    .bottom-header{
+        width:100vw !important;
+        height: 100% !important;
+        position: fixed !important;
+        z-index: 100;
+        display: none;
+    }
+
+    .bottom-header-menu{
+        top:10vh !important;
+        height: 80vh !important;
+    }
+    .bottom-header-menu li{
+      width:100% !important;
+      padding:0 !important;
+      height: 15% !important;
+      text-align:center;
+    }
+    .bottom-header-menu li:first-child{
+      margin-top:5% !important;
+      }
+
+    .bottom-header-menu li a{
+        font-size:30px;
+        padding-top:30px;
+      } 
+    #menu-button{
+        
+        display:block;
+        z-index: 101;
+    }
+
+ }
+
+ @media only screen and (min-width: 769px) and (max-width: 1024px) { 
+
+  .top-header-leftDesc,.top-header-rightDesc-Dostavka,.top-header-rightDesc-Zakaz{
+    line-height: 3.5;
+    font-size:10px;
+  }
+  .top-header-rightDesc-Zakaz{
+    text-align:center;
+  }
+  .middle-header-registr,.middle-header-enter,.middle-header-korzina{
+    font-size:0.6em;
+    text-align: center;
+  }
+
+
+.bottom-header-menu li{
+    padding-right:20px;
+    list-style: none;
+    display:inline-block;
+}
+.bottom-header-menu li:last-child{
+    padding-right:0;
+}
+.bottom-header-menu li a{
+  font-size:15px;
+    text-align: center;
+    font-weight: 450;
+    color:black;
+    display: block;
+    width:100%;
+    height: 100%;
+}
+
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1199px) { 
+
+  .top-header-leftDesc,.top-header-rightDesc-Dostavka,.top-header-rightDesc-Zakaz{
+    line-height: 3.3;
+    font-size:10px;
+  }
+  .top-header-rightDesc-Zakaz{
+    text-align:right;
+  }
+  .middle-header-registr,.middle-header-enter,.middle-header-korzina{
+    font-size:0.6em;
+    text-align: center;
+  }
+
+
+.bottom-header-menu li{
+    padding-right:30px;
+    list-style: none;
+    display:inline-block;
+}
+.bottom-header-menu li:last-child{
+    padding-right:0;
+}
+.bottom-header-menu li a{
+    font-size:20px;
+    text-align: center;
+    font-weight: 450;
+    color:black;
+    display: block;
+    width:100%;
+    height: 100%;
+}
+
+}
+
+/* Средние девайсы («таблетки», >= 768px) */ 
+
+/* Большие девайсы (десктопы, >= 992px) */
+@media (min-width: 992px) {  }
+
+/* Экстрабольшие девайсы (большие десктопы, >= 1200px) */
+@media (min-width: 1200px) { }

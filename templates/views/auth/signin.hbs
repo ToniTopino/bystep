@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="">
+
+      <div class="panel-body" style="display: flex;justify-content: flex-start;flex-direction: column;">
+
+        <div class="col-md-4">
+          <h3 style="font-weight: 700;font-size: 40px;color: black;">Вход</h3>
+          <form role="form" action="/signin" method="post">
+            <div class="form-group">
+              <label for="sender-email" class="control-label"></label>
+              <div class="input-icon">
+                <input class="form-control email" id="signin-email" style="border-radius: 0;" placeholder="Email" name="email" type="email" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-icon">
+                <input type="password" class="form-control" style="border-radius: 0;" placeholder="Пароль" name="password" id="password">
+              </div>
+            </div>
+            <div class="form-group" style="margin-top:30px;">
+              <input type="submit" class="btn btn-primary" style="background:black;width: 200px;border-radius: 0;border-color: black;" value="войти">
+              <a href='/forgotpassword' style="color: #c2c2c2;margin-left:10px;">Забыли пароль?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

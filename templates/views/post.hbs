@@ -1,0 +1,95 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<article>
+				<p><a href="/blog">&larr; back to the blog</a></p>
+				<hr>
+				<a href="#comments">Оставить отзыв</a>
+				<header>
+					<h1>{{post.name}}</h1>
+					<h5>
+						{{{categoryList post.categories prefix="Категория "}}}
+					</h5>
+				</header>
+				<div class="post">
+					{{#if post.image}}<img src="{{{cloudinaryUrl post.image width=750 height=450 crop='fit' }}}" class="img-responsive">{{/if}}
+					{{{post.content.extended}}}
+				</div>
+				{{moment post.publishedDate format="DD.MM.YYYY"}} <br>
+				{{post.author.name.full}}
+			</article>
+			<h1>Отзывы</h1>
+			<hr>
+			Всего отзывов - {{comments.length}}
+			<br>
+			<br>
+			{{#each comments}}
+			<div id="comment-id-{{id}}" style="margin-top: 20px">
+			<a href="#">{{author.name.full}}</a>
+			{{#if author.id}}
+			<a class="comment-delete js-delete-confirm" href="?remove=comment&comment= + {{id}}" title="Удалить отзыв" rel="tooltip" data-placement="left">Удалить</a>
+			{{/if}}
+			<h5>{{content}}</h5>
+			<p>{{moment publishedOn 'LLL'}}</p>
+			<hr>
+			</div>
+			{{/each}}
+			<form id="comments" method="post" style="margin-bottom: 40px; margin-top: 40px">
+			  <input type="hidden" name="action" value="comment.create"/>
+			  <div class="media">
+			    <div class="media-body">
+						{{#if user}}
+						<textarea class="form-control" name="content comment-field-input" placeholder="Оставить отзыв..." style="margin-bottom: 10px; min-height: 80px; resize: vertical"></textarea>
+						{{else}}
+			      <textarea class="form-control" name="content" placeholder="Пожалуйста, войдите, чтобы оставить отзыв" disabled="disabled" style="margin-bottom: 10px; min-height: 80px; resize: vertical"></textarea>
+						{{/if}}
+			      <ul class="list-inline">
+							{{#if user}}
+							<button style="background:black;width: 200px;border-radius: 0;border-color: black; margin-top:20px;" class="btn btn-primary" type="submit">Оставить отзыв</button>
+							{{else}}
+							<li><a style="background:black;width: 200px;border-radius: 0;border-color: black; margin-top:20px;" class="btn btn-sm btn-primary" href="/signin">Войти</a></li>
+							{{/if}}
+			      </ul>
+			    </div>
+			  </div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+<script>
+    jQuery(function($) {
+
+        var comments = $('#comments');
+        var input = $('.comment-field-input');
+        var submit = comments.find('button[type=submit]');
+
+
+        // Scroll to comments and focus input field
+        function scrollToComments(e) {
+
+            e.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: comments.offset().top
+            }, 350);
+
+            input.eq(0).focus();
+        }
+        $('[href="#comments"]').click(scrollToComments);
+
+
+
+        // Check if field has content: enable/disable submit. Disable by default
+        submit.attr('disabled', 'disabled');
+        input.keyup(function() {
+            if ($.trim($(this).val())) {
+                submit.removeAttr('disabled');
+            } else {
+                submit.attr('disabled', 'disabled');
+            }
+        });
+    });
+</script>

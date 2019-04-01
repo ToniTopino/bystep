@@ -1,0 +1,10 @@
+@media only screen and (min-width: 320px) and (max-width: 1024px) { 
+
+
+    .section_4_slider_slide1,.section_4_slider_slide2,.section_4_slider_slide3,.section_4_slider_slide4,
+    .section_4_slider_slide5,.section_4_slider_slide6,.section_4_slider_slide7,.section_4_slider_slide8{
+        height: 350px !important;
+    }
+    
+
+ }

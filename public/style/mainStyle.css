@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=latin-ext');
+
+body,h1,h2,h3,h4,h5,h6,p,a{
+    font-family: 'Ubuntu', sans-serif;
+}
+a{
+    text-decoration: none !important;
+}
+.navigation-menu li{
+    display: inline-block;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+    .fullImg{
+        width:100% !important;
+        height: 100% !important;
+    }
+
+ }

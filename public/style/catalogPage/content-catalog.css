@@ -1,0 +1,35 @@
+.content-catalog-Name{
+    height: auto;
+    border-bottom:2px solid black;
+    padding-bottom:10px;
+}
+.content-catalog-Name-h2{
+    font-size:30px;
+
+
+}
+
+.products-filter-spis{
+    list-style: none;
+    width:100%;
+}
+.products-filter-spis li{
+    display:inline-block;
+}
+
+
+
+
+.product-brand{
+    font-size:20px;
+}
+.product-brand_desc,.product-price,.product-brand{
+    margin-bottom:0;
+    padding:0;
+}
+.product-price
+.product-emblem{
+    position: absolute;
+    top:5%;
+    right:5%; 
+}
